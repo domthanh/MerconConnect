@@ -15,6 +15,7 @@ a {
 
 a:hover {
   color: #A3CF60;
+  text-decoration: none;
 }
 
 .btn {
@@ -26,6 +27,10 @@ a:hover {
 
 :focus {
   outline: none;
+}
+
+.colorPrimary {
+  color: #A3CF60;
 }
 
 .btnPrimary {
@@ -70,7 +75,7 @@ a:hover {
 }
 
 #sidebar-wrapper .sidebar-heading img {
-  width: 125px;
+  width: 145px;
 }
 
 #page-content-wrapper {
@@ -136,7 +141,7 @@ a:hover {
 
 #sidebar-wrapper {
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .navbar {
@@ -145,9 +150,88 @@ a:hover {
   top: 0;
 }
 
-@media (max-width: 768px) {
+.container {
+  max-width: 100%;
+  padding: 0 3% 3%;
+}
+
+.barmobile {
+  display: none;
+}
+
+.user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user h3 {
+  font-size: 15px !important;
+  font-weight: 600;
+  margin: 0;
+  text-align: right;
+  margin-right: 15px;
+}
+
+.user h3 span {
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+  color: #9E9E9E;
+  font-weight: 400;
+}
+
+.user .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.user .avatar img {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
   #page-content-wrapper {
     margin-left: 0;
+    margin-top: 66px;
+  }
+  .container {
+    padding: 0 16px 16px;
+  }
+  .title {
+    margin: 27px 0;
+    height: auto !important;
+  }
+  .title .user {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    right: 16px;
+    top: 15px;
+  }
+  .title .user .avatar {
+    width: 30px;
+    height: 30px;
+  }
+  .title .user h3 {
+    margin-right: 10px;
+  }
+  .title .user h3 span {
+    margin-top: 1px;
   }
   #sidebar-wrapper {
     margin-left: -16rem;
@@ -169,13 +253,36 @@ a:hover {
     z-index: 980;
     height: 100%;
   }
+  .barmobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #fff;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 99;
+    -webkit-box-shadow: 3px 0 10px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 3px 0 10px 0 rgba(0, 0, 0, 0.15);
+    height: 65px;
+  }
+  .barmobile img {
+    width: 125px;
+  }
+  .barmobile button {
+    background: none;
+    border: none;
+    margin-right: -15px;
+  }
+  .barmobile svg {
+    color: #6d6e70;
+  }
 }
 
 /* end side bar */
-.container {
-  max-width: 96%;
-}
-
 .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -186,12 +293,36 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 30px 0 25px;
+  height: 99px;
 }
 
 .title h3 {
   font-size: 20px;
   font-weight: 600;
+  margin-bottom: 0;
+}
+
+.title .links h3 a {
+  margin-left: -5px;
+  margin-right: 5px;
+  font-size: 20px;
+  color: #9E9E9E;
+}
+
+.title .links h3 a svg {
+  width: 20px;
+  height: 20px;
+}
+
+.title .links a {
+  margin-left: 25px;
+  text-decoration: underline;
+  color: #A3CF60;
+  font-size: 14px;
+}
+
+.title .links a:hover {
+  color: #A3CF60;
 }
 
 .box {
@@ -260,6 +391,10 @@ a:hover {
   background: #2A80F1;
 }
 
+.font-weight-semibold {
+  font-weight: 600;
+}
+
 .table-custom {
   color: #6d6e70;
 }
@@ -279,26 +414,39 @@ a:hover {
   border-bottom: 1px solid #f7f7f7;
   padding: .85rem 20px .85rem;
   vertical-align: middle;
-}
-
-.table-custom td:nth-child(1) a {
-  color: #007D4C;
-}
-
-.table-custom td:nth-child(1) a:hover {
-  color: #007D4C;
-}
-
-.table-custom td:nth-child(2) {
-  color: #2A80F1;
+  white-space: nowrap;
 }
 
 .table-custom td:last-child {
   padding-left: 0;
 }
 
-.table-custom tr:hover {
+.table-custom .color1 {
+  color: #007D4C !important;
+  font-weight: 600;
+}
+
+.table-custom .color2 {
+  color: #2A80F1 !important;
+  font-weight: 600;
+}
+
+.table-custom tbody tr {
+  cursor: pointer;
+}
+
+.table-custom tbody tr:hover {
   background-color: #f8f9fa;
+}
+
+.table-custom .last {
+  background: transparent !important;
+}
+
+.table-custom .last td {
+  padding-bottom: 0;
+  border: none;
+  padding-top: 20px;
 }
 
 .search-form input {
@@ -313,12 +461,8 @@ a:hover {
   border-color: #A3CF60;
 }
 
-.search-form .buttonSearch {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
+.search-form .btn {
+  width: 100%;
 }
 
 .selectCustom .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
@@ -352,7 +496,8 @@ a:hover {
   padding: 10px 1.5rem;
 }
 
-.selectCustom .dropdown-item.active, .selectCustom .dropdown-item:active {
+.selectCustom .dropdown-item.active,
+.selectCustom .dropdown-item:active {
   background-color: #A3CF60;
 }
 
@@ -415,48 +560,18 @@ a:hover {
           box-shadow: none;
 }
 
-.user {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.user h3 {
-  font-size: 15px;
-  font-weight: 600;
-  margin: 0;
-  text-align: right;
-  margin-right: 15px;
-}
-
-.user h3 span {
-  font-size: 13px;
-  display: block;
-  margin-top: 5px;
-}
-
-.user .avatar {
-  width: 40px;
-  height: 40px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.user .avatar svg {
-  color: #fff;
-  width: 18px;
-  height: 18px;
+@media (max-width: 767px) {
+  .paginationCustom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .paginationCustom span {
+    margin-bottom: 20px;
+  }
+  .box {
+    padding: 16px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
