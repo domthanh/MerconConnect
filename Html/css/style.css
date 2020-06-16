@@ -9,6 +9,10 @@ body {
   background: #f7f7f7;
 }
 
+html, body {
+  height: 100%;
+}
+
 a {
   color: #6d6e70;
 }
@@ -54,6 +58,10 @@ a:hover {
   border-color: #007D4C;
   color: #fff;
   background: #007D4C;
+}
+
+.grey {
+  color: #9E9E9E;
 }
 
 /* side bar */
@@ -816,6 +824,184 @@ a:hover {
 
 .titleChart .dropdown li a {
   font-size: 14px;
+}
+
+/* LOGIN */
+.loginPage {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loginPage .background {
+  height: 100%;
+  position: relative;
+}
+
+.loginPage .background img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.loginPage .background::before {
+  background: rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+
+.loginPage .boxLogin {
+  max-width: 400px;
+  width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.loginPage .boxLogin h4 {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.loginPage .boxLogin input {
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-bottom: 1px solid #CCCCCC;
+  background: transparent;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.loginPage .boxLogin .fgpass {
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.loginPage .boxLogin button {
+  min-width: 165px;
+  height: 45px;
+}
+
+@media (max-width: 991px) {
+  .loginPage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .loginPage .background {
+    display: none;
+  }
+  .loginPage .boxLogin {
+    padding: 20px;
+  }
+}
+
+/* Chat widget */
+.conversation-list {
+  list-style: none;
+  height: 332px;
+  padding: 0 7px;
+}
+
+.conversation-list li {
+  margin-bottom: 24px;
+}
+
+.conversation-list .chat-avatar {
+  float: left;
+  text-align: center;
+  width: 34px;
+}
+
+.conversation-list .chat-avatar img {
+  border-radius: 100%;
+  width: 100%;
+}
+
+.conversation-list .chat-avatar i {
+  font-size: 12px;
+  font-style: normal;
+}
+
+.conversation-list .ctext-wrap {
+  background: #F3F3F3;
+  display: inline-block;
+  border-radius: 20px 20px 20px 0;
+  padding: 4px 12px;
+  position: relative;
+  min-width: 160px;
+}
+
+.conversation-list .ctext-wrap i {
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  position: relative;
+}
+
+.conversation-list .ctext-wrap p {
+  margin: 0;
+  padding-top: 3px;
+}
+
+.conversation-list .ctext-wrap:after {
+  right: 98%;
+  top: 0;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-width: 6px;
+  margin-left: -1px;
+}
+
+.conversation-list .conversation-text {
+  float: left;
+  font-size: 12px;
+  margin-left: 12px;
+  width: 70%;
+}
+
+.conversation-list .odd .chat-avatar {
+  float: right !important;
+}
+
+.conversation-list .odd .conversation-text {
+  float: right !important;
+  margin-right: 12px;
+  text-align: right;
+  width: 70% !important;
+}
+
+.conversation-list .odd .ctext-wrap:after {
+  border-color: transparent;
+  left: 99% !important;
 }
 
 @media (max-width: 991px) {
