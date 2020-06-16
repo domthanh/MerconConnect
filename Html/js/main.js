@@ -17,3 +17,4 @@ feather.replace()
 
 //SELECT
 $('select').selectpicker();
+

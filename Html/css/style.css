@@ -23,6 +23,8 @@ a:hover {
   font-weight: 600;
   font-size: 15px;
   height: 40px;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 :focus {
@@ -417,10 +419,6 @@ a:hover {
   white-space: nowrap;
 }
 
-.table-custom td:last-child {
-  padding-left: 0;
-}
-
 .table-custom .color1 {
   color: #007D4C !important;
   font-weight: 600;
@@ -447,6 +445,52 @@ a:hover {
   padding-bottom: 0;
   border: none;
   padding-top: 20px;
+}
+
+.table-custom .dropdown button {
+  color: #6d6e70;
+}
+
+.table-custom .dropdown svg {
+  width: 18px;
+  height: 18px;
+}
+
+.table-custom .dropdown .dropdown-menu {
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 3px;
+  padding: 0;
+  min-width: 160px;
+}
+
+.table-custom .dropdown .dropdown-menu .dropdown-item {
+  border-bottom: 1px solid #eaeaea;
+  padding: 8px 20px;
+  color: #6d6e70;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: -3px;
+}
+
+.table-custom .dropdown .dropdown-menu .dropdown-item:focus {
+  background-color: #A3CF60;
+  color: #fff;
+}
+
+.table-custom .dropdown .dropdown-menu .dropdown-item svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.table-custom .dropdown .dropdown-menu .dropdown-item:last-child {
+  border: none;
+}
+
+.table-nolinktr tbody tr {
+  cursor: inherit;
 }
 
 .search-form input {
@@ -560,6 +604,230 @@ a:hover {
           box-shadow: none;
 }
 
+.tabs .nav {
+  background: #EEEEEE;
+  border: none;
+  border-radius: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tabs .nav svg {
+  margin-right: 10px;
+}
+
+.tabs .nav .nav-link {
+  font-weight: 600;
+  padding: 12px 1rem;
+}
+
+.tabs .nav .nav-link:hover {
+  border: none;
+}
+
+.tabs .nav .nav-link.active {
+  background: #A3CF60;
+  color: #fff;
+  border-radius: 0;
+}
+
+.tabs .tab-content .box {
+  height: 100%;
+}
+
+.tabs .tab-content .box .infoNumber {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+}
+
+.tabs .tab-content .box .infoNumber li {
+  padding: 10px 0;
+}
+
+.tabs .tab-content .box .infoNumber label {
+  opacity: 0.75;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.tabs .tab-content .box .progressDays {
+  position: relative;
+}
+
+.tabs .tab-content .box .progressDays svg {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.tabs .tab-content .box .progressDays svg circle {
+  -webkit-animation: load 3s;
+          animation: load 3s;
+}
+
+@-webkit-keyframes load {
+  0% {
+    stroke-dashoffset: 339.292;
+  }
+}
+
+@keyframes load {
+  0% {
+    stroke-dashoffset: 339.292;
+  }
+}
+
+.tabs .tab-content .box .progressDays .text {
+  color: #A3CF60;
+  font-weight: 700;
+  font-size: 27px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  line-height: 22px;
+}
+
+.tabs .tab-content .box .progressDays .text span {
+  font-size: 15px;
+  font-weight: 600;
+  display: block;
+}
+
+.tabs .tab-content .box .linkfile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tabs .tab-content .box .linkfile button {
+  margin-top: -7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tabs .tab-content .box .linkfile button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.tabs .tab-content .box .shipmentprogress {
+  margin-top: 3rem;
+  position: relative;
+}
+
+.tabs .tab-content .box .shipmentprogress .ttboat {
+  position: relative;
+  top: 12px;
+  left: -25px;
+  -webkit-animation: boat 3s;
+          animation: boat 3s;
+}
+
+@-webkit-keyframes boat {
+  0% {
+    margin-left: 0;
+  }
+}
+
+@keyframes boat {
+  0% {
+    margin-left: 0;
+  }
+}
+
+.tabs .tab-content .box .shipmentprogress .days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.tabs .tab-content .box .shipmentprogress .days span {
+  font-weight: 400;
+  display: block;
+  color: #9E9E9E;
+  margin-top: 5px;
+}
+
+.tabs .tab-content .box .shipmentprogress .progress {
+  height: 2px;
+  background: #e6e6e6;
+}
+
+.tabs .tab-content .box .shipmentprogress .progress .progress-bar {
+  background: #A3CF60;
+  -webkit-animation: animateBar 3s;
+          animation: animateBar 3s;
+}
+
+@-webkit-keyframes animateBar {
+  0% {
+    width: 0;
+  }
+}
+
+@keyframes animateBar {
+  0% {
+    width: 0;
+  }
+}
+
+.linkdocument {
+  color: #097344 !important;
+  text-decoration: underline !important;
+}
+
+.titleChart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.titleChart .dropdown {
+  min-width: 120px;
+  width: auto !important;
+}
+
+.titleChart .dropdown .btn {
+  font-size: 14px;
+  height: 36px;
+}
+
+.titleChart .dropdown li a {
+  font-size: 14px;
+}
+
+@media (max-width: 991px) {
+  .tab-content .col-sm-12 {
+    margin-bottom: 16px;
+  }
+  .tabs .nav svg {
+    display: block;
+    margin: 5px auto;
+  }
+}
+
 @media (max-width: 767px) {
   .paginationCustom {
     -webkit-box-orient: vertical;
@@ -572,6 +840,15 @@ a:hover {
   }
   .box {
     padding: 16px;
+  }
+  .titleChart {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .titleChart .dropdown {
+    margin-top: 13px;
   }
 }
 /*# sourceMappingURL=style.css.map */

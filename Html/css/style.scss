@@ -27,14 +27,17 @@ a {
     font-weight: 600;
     font-size: 15px;
     height: 40px;
+    box-shadow: none !important;
 }
 
 :focus {
     outline: none;
 }
+
 .colorPrimary {
     color: $colorPrimary;
 }
+
 .btnPrimary {
     background: $colorPrimary;
     color: #fff;
@@ -206,6 +209,7 @@ a {
     .title {
         margin: 27px 0;
         height: auto !important;
+
         .user {
             position: fixed;
             top: 0;
@@ -285,27 +289,32 @@ a {
     justify-content: space-between;
     align-items: center;
     height: 99px;
+
     h3 {
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 0;
     }
+
     .links {
         h3 a {
             margin-left: - 5px;
             margin-right: 5px;
             font-size: 20px;
             color: #9E9E9E;
+
             svg {
                 width: 20px;
                 height: 20px;
             }
         }
+
         a {
             margin-left: 25px;
             text-decoration: underline;
             color: $colorPrimary;
             font-size: 14px;
+
             &:hover {
                 color: $colorPrimary;
             }
@@ -374,9 +383,11 @@ a {
         background: #2A80F1;
     }
 }
+
 .font-weight-semibold {
     font-weight: 600;
 }
+
 .table-custom {
     color: $colorSecondary;
 
@@ -396,18 +407,18 @@ a {
         padding: .85rem 20px .85rem;
         vertical-align: middle;
         white-space: nowrap;
-        &:last-child {
-            padding-left: 0;
-        }
     }
+
     .color1 {
         color: #007D4C !important;
         font-weight: 600;
     }
+
     .color2 {
         color: #2A80F1 !important;
         font-weight: 600;
     }
+
     tbody tr {
         cursor: pointer;
 
@@ -415,16 +426,66 @@ a {
             background-color: #f8f9fa;
         }
     }
+
     .last {
         background: transparent !important;
+
         td {
             padding-bottom: 0;
             border: none;
             padding-top: 20px;
         }
     }
+
+    .dropdown {
+        button {
+            color: $colorSecondary;
+        }
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .dropdown-menu {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border: none;
+            border-radius: 3px;
+            padding: 0;
+            min-width: 160px;
+
+            .dropdown-item {
+                border-bottom: 1px solid #eaeaea;
+                padding: 8px 20px;
+                color: $colorSecondary;
+                font-size: 15px;
+                font-weight: 400;
+                margin-top: -3px;
+
+                &:focus {
+                    background-color: $colorPrimary;
+                    color: #fff;
+                }
+
+                svg {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 10px;
+                }
+
+                &:last-child {
+                    border: none
+                }
+            }
+        }
+    }
 }
 
+.table-nolinktr {
+    tbody tr {
+        cursor: inherit;
+    }
+}
 
 .search-form {
     input {
@@ -529,16 +590,204 @@ a {
     }
 }
 
+.tabs {
+    .nav {
+        background: #EEEEEE;
+        border: none;
+        border-radius: 0;
+        align-items: center;
+
+        svg {
+            margin-right: 10px;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            padding: 12px 1rem;
+
+            &:hover {
+                border: none;
+            }
+
+            &.active {
+                background: $colorPrimary;
+                color: #fff;
+                border-radius: 0;
+            }
+        }
+    }
+
+    .tab-content {
+        .box {
+            height: 100%;
+
+            .infoNumber {
+                margin: 0;
+                padding: 0;
+                font-weight: 600;
+
+                li {
+                    padding: 10px 0;
+                }
+
+                label {
+                    opacity: 0.75;
+                    font-weight: 400;
+                    font-size: 14px;
+                    margin-bottom: 0;
+                }
+            }
+
+            .progressDays {
+                position: relative;
+
+                svg {
+                    transform: rotate(90deg);
+
+                    circle {
+                        animation: load 3s;
+                    }
+                }
+
+                @keyframes load {
+                    0% {
+                        stroke-dashoffset: 339.292;
+                    }
+                }
+
+                .text {
+                    color: #A3CF60;
+                    font-weight: 700;
+                    font-size: 27px;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    line-height: 22px;
+
+                    span {
+                        font-size: 15px;
+                        font-weight: 600;
+                        display: block;
+                    }
+                }
+            }
+
+            .linkfile {
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    margin-top: -7px;
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+
+            .shipmentprogress {
+                margin-top: 3rem;
+                position: relative;
+
+                .ttboat {
+                    position: relative;
+                    top: 12px;
+                    left: -25px;
+                    animation: boat 3s;
+                }
+
+                @keyframes boat {
+                    0% {
+                        margin-left: 0;
+                    }
+                }
+
+                .days {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 15px;
+                    font-weight: 600;
+
+                    span {
+                        font-weight: 400;
+                        display: block;
+                        color: #9E9E9E;
+                        margin-top: 5px;
+                    }
+                }
+
+                .progress {
+                    height: 2px;
+                    background: #e6e6e6;
+
+                    .progress-bar {
+                        background: $colorPrimary;
+                        animation: animateBar 3s;
+                    }
+
+                    @keyframes animateBar {
+                        0% {
+                            width: 0;
+                        }
+                    }
+
+                }
+            }
 
 
+        }
+
+    }
+}
 
 
+.linkdocument {
+    color: #097344 !important;
+    text-decoration: underline !important;
+}
 
+.titleChart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    .dropdown  {
+        min-width: 120px;
 
+        width: auto !important;
 
+        .btn {
+            font-size: 14px;
+            height: 36px;
+        }
+        li a {
+            font-size: 14px;
+        }
+    }
+}
 
+@media (max-width: 991px) {
+    .tab-content {
+        .col-sm-12 {
+            margin-bottom: 16px;
+        }
+    }
 
+    .tabs {
+        .nav {
+            svg {
+                display: block;
+                margin: 5px auto;
+            }
+
+        }
+    }
+
+}
 
 
 @media (max-width: 767px) {
@@ -549,7 +798,15 @@ a {
             margin-bottom: 20px;
         }
     }
+
     .box {
         padding: 16px;
+    }
+
+    .titleChart {
+        flex-direction: column;
+        .dropdown  {
+            margin-top: 13px;
+        }
     }
 }

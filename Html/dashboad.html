@@ -8,14 +8,15 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Simple Sidebar - Start Bootstrap Template</title>
-
+  <title>Mercon</title>
+  <link rel="shortcut icon" href="favicon.png">
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
-
+  <link href="css/bootstrap-select.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet">
-
+  <!-- icon -->
+  <script src="js/feather.min.js"></script>
 </head>
 
 <body>
@@ -23,15 +24,28 @@
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Start Bootstrap </div>
-      <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+    <div id="sidebar-wrapper">
+      <a href="#" class="sidebar-heading">
+        <img src="images/logo.png" alt="logo">
+      </a>
+      <div class="list-group">
+        <a href="#" class="active">
+          <i data-feather="home"></i> Home</a>
+        <a href="#">
+          <i data-feather="pie-chart"></i> Dashboard</a>
+        </a>
+        <a href="#">
+          <i data-feather="file"></i>Reports</a>
+        <a href="#">
+          <i data-feather="info"></i>About
+        </a>
+        <a href="#">
+          <i data-feather="message-square"></i>
+          Chat</a>
+        <a href="#">
+          <i data-feather="hexagon"></i>
+          App</a>
+        <a href="#"><i data-feather="log-out"></i> Log Out</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -40,54 +54,61 @@
 
     <div id="page-content-wrapper">
 
+      <!-- bar mobile -->
 
-      <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          brak
-          <button class="btn btn-primary  d-md-none" id="menu-toggle">Toggle Menu</button>
-        </nav>
-      </div>
+      <nav class="navbar navbar-expand-lg barmobile">
+
+        <button id="menu-toggle"><i data-feather="menu"></i></button>
+      </nav>
+      <!-- / bar mobile -->
+
       <div class="container">
-        <h1 class="mt-4">Simple Sidebar</h1>
-        <div class="row">
-          <div class="col-sm-4" id="chartcolumn"></div>
-          <div class="col-sm-8" id="chart"> </div>          
+        <div class="title">
+          <h3>Dashboard</h3>
+          <div class="user">
+            <h3>Starbuck Coffee Trading Sarl
+              <span>John Mayers</span></h3>
+            <div class="avatar">
+              <img src="images/profile.png" alt="profile">
+            </div>
+          </div>
         </div>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on
-          larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional,
-          and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the
-          menu when clicked.</p>
-        <h1 class="mt-4">Simple Sidebar</h1>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on
-          larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional,
-          and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the
-          menu when clicked.</p>
-        <h1 class="mt-4">Simple Sidebar</h1>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on
-          larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional,
-          and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the
-          menu when clicked.</p>
-        <h1 class="mt-4">Simple Sidebar</h1>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on
-          larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional,
-          and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the
-          menu when clicked.</p>
-        <h1 class="mt-4">Simple Sidebar</h1>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on
-          larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional,
-          and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the
-          menu when clicked.</p>
-        <h1 class="mt-4">Simple Sidebar</h1>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on
-          larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional,
-          and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the
-          menu when clicked.</p>
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-3">
+            <div class="box">
+              <div class="mb-3 font-weight-semibold titleChart">
+                Target Bags
+                <select class="selectCustom">
+                  <option>Select Crop</option>
+                  <option>Ketchup</option>
+                  <option>Relish</option>
+                </select>
+              </div>
+              <div  id="chartTargetBags"></div>
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-12">
+            <div class="box">
+              <div class="mb-3 font-weight-semibold titleChart">
+                Approved & Rejection Rates
+                <div class="d-flex flex-row">
+                  <select class="selectCustom mr-3">
+                    <option>Select Crop</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                  </select>
+                  <select class="selectCustom">
+                    <option>Select Type</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                  </select>
+                </div>
+              </div>
+              <div id="chartRates"></div>
+            </div>
+          </div>          
+        </div>
+
       </div>
     </div>
     <!-- /#page-content-wrapper -->
@@ -98,26 +119,10 @@
   <!-- Bootstrap core JavaScript -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap-select.js"></script>
   <script src="js/apexcharts.min.js"></script>
   <script src="js/dashboard.js"></script>
-  <!-- Menu Toggle Script -->
-  <script>
-
-
-    $('#menu-toggle').click(function (e) {
-      e.stopPropagation();
-      $("#wrapper").toggleClass("toggled");
-    });
-    // $('#sidebar-wrapper').click(function (e) {
-    //   e.stopPropagation();
-    // });
-    $('body,html').click(function (e) {
-      $('#wrapper').removeClass('toggled');
-    });
-
-
-  </script>
-
+  <script src="js/main.js"></script>
 </body>
 
 </html>

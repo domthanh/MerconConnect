@@ -27,7 +27,7 @@ var options = {
 	plotOptions: {
 		bar: {
 			horizontal: false,
-			columnWidth: '35%',
+			columnWidth: '30%',
 		},
 
 	},
@@ -37,12 +37,20 @@ var options = {
 		categories: ['Jan', 'Api', 'Sep', 'Nov',
 			'Jan', 'Api', 'Sep', 'Nov', 'Jan', 'Api', 'Sep', 'Nov'
 		],
+		labels: {
+			style: {
+				fontSize: '13px',
+				fontFamily: 'Open Sans',				
+			}
+		},
 	},
 
 	legend: {
 		show: true,
 		position: 'top',
 		horizontalAlign: 'left', 
+		fontSize: '13px',
+		fontFamily: 'Open Sans',
 		markers: {
 			width: 18,
 			height: 10,
@@ -75,6 +83,10 @@ var options = {
 			align: 'right',
 			minWidth: 0,
 			maxWidth: 160,
+			style: {
+				fontSize: '13px',
+				fontFamily: 'Open Sans',				
+			}
 		},
 	},
 
@@ -90,7 +102,7 @@ var options = {
 			plotOptions: {
 				bar: {
 					horizontal: true,
-					barHeight: '35%',
+					barHeight: '38%',
 				},
 		
 			},
@@ -98,7 +110,7 @@ var options = {
 	}],
 };
 
-var chart = new ApexCharts(document.querySelector("#chart"), options);
+var chart = new ApexCharts(document.querySelector("#chartRates"), options);
 chart.render();
 
 
@@ -156,9 +168,10 @@ var optionscolumn = {
 		],
 		labels: {
 			style: {
-				fontSize: '12px'
+				fontSize: '13px',
+				fontFamily: 'Open Sans',				
 			}
-		}
+		},
 	},
 	yaxis: {
 		tickAmount: 6,
@@ -167,11 +180,15 @@ var optionscolumn = {
 			align: 'right',
 			minWidth: 0,
 			maxWidth: 160,
+			style: {
+				fontSize: '13px',
+				fontFamily: 'Open Sans',				
+			}
 		},
 	},
 };
 
-var chartcolumn = new ApexCharts(document.querySelector("#chartcolumn"), optionscolumn);
+var chartcolumn = new ApexCharts(document.querySelector("#chartTargetBags"), optionscolumn);
 chartcolumn.render();
 
 
