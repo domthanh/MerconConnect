@@ -7,9 +7,12 @@ $('#menu-toggle').click(function (e) {
 // $('#sidebar-wrapper').click(function (e) {
 //   e.stopPropagation();
 // });
+
+
 $('body,html').click(function (e) {
 	$('#wrapper').removeClass('toggled');
 });
+
 
 
 // ICON 

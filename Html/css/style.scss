@@ -77,7 +77,6 @@ a {
     width: 16rem;
     background: #fff;
     height: 100%;
-
     .sidebar-heading {
         display: flex;
         align-items: center;
@@ -88,8 +87,53 @@ a {
             width: 145px;
         }
     }
-}
+    .client {
+        > a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span {
+                display: flex;
+                align-items: center;
+            }
+            > svg {
+                opacity: 0.65;
+            }
+        }
+        position: relative;
+        &:hover {
+            color: $colorPrimary;
+        }
+        .clientGroup {
+            max-width: 16rem;
+            min-width: 16rem;
+            border: none;
+            padding: 10px 0;
+            border-radius: 0;
+            transition: all 0.3s;
+            animation: DropDownSlide 0.3s;
+            margin-left: 0;          
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+            a.dropdown-item {
+                padding:8px 20px;
+                margin: 0;
+                background: transparent !important;
+                font-size: 15px;
+                color: #6d6e70;
+                &:hover {
+                    color: $colorPrimary;
+                }
+            }
 
+        }
+    }
+    
+    @keyframes DropDownSlide {
+        0% {
+            margin-top: -10px;
+        }
+    }
+}
 
 
 
@@ -1194,7 +1238,27 @@ a {
     opacity: 0.75;
 }
 
+
+
 @media (max-width: 991px) {
+    #sidebar-wrapper {
+        overflow-y: auto;
+        .client { 
+            .clientGroup {
+                min-width: auto;
+                position: static !important;
+                margin-left: 0;
+                border-left: none;
+                transition: none;
+                transform: none !important;
+                box-shadow: none;
+                animation: none;
+                &.show {
+                    margin-top: -20px;
+                }
+            }
+        }
+    }
     .tab-content {
         .col-sm-12 {
             margin-bottom: 16px;

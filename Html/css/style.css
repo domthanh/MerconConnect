@@ -96,6 +96,78 @@ a:hover {
   width: 145px;
 }
 
+#sidebar-wrapper .client {
+  position: relative;
+}
+
+#sidebar-wrapper .client > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sidebar-wrapper .client > a span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sidebar-wrapper .client > a > svg {
+  opacity: 0.65;
+}
+
+#sidebar-wrapper .client:hover {
+  color: #A3CF60;
+}
+
+#sidebar-wrapper .client .clientGroup {
+  max-width: 16rem;
+  min-width: 16rem;
+  border: none;
+  padding: 10px 0;
+  border-radius: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-animation: DropDownSlide 0.3s;
+          animation: DropDownSlide 0.3s;
+  margin-left: 0;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+#sidebar-wrapper .client .clientGroup a.dropdown-item {
+  padding: 8px 20px;
+  margin: 0;
+  background: transparent !important;
+  font-size: 15px;
+  color: #6d6e70;
+}
+
+#sidebar-wrapper .client .clientGroup a.dropdown-item:hover {
+  color: #A3CF60;
+}
+
+@-webkit-keyframes DropDownSlide {
+  0% {
+    margin-top: -10px;
+  }
+}
+
+@keyframes DropDownSlide {
+  0% {
+    margin-top: -10px;
+  }
+}
+
 #page-content-wrapper {
   margin-left: 16rem;
 }
@@ -1303,6 +1375,26 @@ a:hover {
 }
 
 @media (max-width: 991px) {
+  #sidebar-wrapper {
+    overflow-y: auto;
+  }
+  #sidebar-wrapper .client .clientGroup {
+    min-width: auto;
+    position: static !important;
+    margin-left: 0;
+    border-left: none;
+    -webkit-transition: none;
+    transition: none;
+    -webkit-transform: none !important;
+            transform: none !important;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-animation: none;
+            animation: none;
+  }
+  #sidebar-wrapper .client .clientGroup.show {
+    margin-top: -20px;
+  }
   .tab-content .col-sm-12 {
     margin-bottom: 16px;
   }
